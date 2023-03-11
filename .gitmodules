@@ -1,0 +1,3 @@
+[submodule "project/HCompiler"]
+	path = project/HCompiler
+	url = https://github.com/TeKGameR950/HCompiler
