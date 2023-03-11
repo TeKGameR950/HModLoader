@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="../../DefineConstants.props" />
+  <PropertyGroup>
+    <GenerateTargetFrameworkMonikerAttribute>false</GenerateTargetFrameworkMonikerAttribute>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ExcludePackageFilesFromOutput>true</ExcludePackageFilesFromOutput>
+    <OutputPath>build\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ProjectGuid>{83B26FBA-F4D0-4EAC-AFB8-6B5C51DF3CD1}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RAFT|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Dependencies\IniFileParser\Exceptions\ParsingException.cs" />
+    <Compile Include="Dependencies\IniFileParser\FileIniParser.cs" />
+    <Compile Include="Dependencies\IniFileParser\Helpers\Assert.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\Configuration\ConcatenateDuplicatedKeysIniParserConfiguration.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\Configuration\IniParserConfiguration.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\Formatting\DefaultIniDataFormatter.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\Formatting\IIniDataFormatter.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\IniData.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\IniDataCaseInsensitive.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\KeyData.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\KeyDataCollection.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\SectionData.cs" />
+    <Compile Include="Dependencies\IniFileParser\Model\SectionDataCollection.cs" />
+    <Compile Include="Dependencies\IniFileParser\Parser\ConcatenateDuplicatedKeysIniDataParser.cs" />
+    <Compile Include="Dependencies\IniFileParser\Parser\IniDataParser.cs" />
+    <Compile Include="Dependencies\IniFileParser\StreamIniDataParser.cs" />
+    <Compile Include="Dependencies\IniFileParser\StringIniParser.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonBinaryType.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonObjectId.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonToken.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonType.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Bson\BsonWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\ConstructorHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\BinaryConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\CustomCreationConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\DataSetConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\DataTableConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\DiscriminatedUnionConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\JsonValueConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\RegexConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\StringEnumConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Converters\VersionConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\DateFormatHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\DateParseHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\DateTimeZoneHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\DefaultValueHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\FloatFormatHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\FloatParseHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\FormatterAssemblyStyle.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Formatting.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\IArrayPool.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\IJsonLineInfo.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonArrayAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonConstructorAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonContainerAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonConvert.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonConverterAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonConverterCollection.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonDictionaryAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonException.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonExtensionDataAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonObjectAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonPosition.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonPropertyAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonReaderException.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonRequiredAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonSerializationException.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonSerializer.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonSerializerSettings.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonTextReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonTextWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonToken.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\JsonWriterException.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\CommentHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\Extensions.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\IJEnumerable.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JArray.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JConstructor.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JContainer.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JEnumerable.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JObject.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JProperty.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JPropertyKeyedCollection.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JRaw.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonLoadSettings.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonMergeSettings.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\ArrayIndexFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\ArrayMultipleIndexFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\ArraySliceFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\FieldFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\FieldMultipleFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\JPath.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\PathFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\QueryExpression.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\QueryFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JsonPath\ScanFilter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JToken.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JTokenReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JTokenType.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JTokenWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\JValue.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\MergeArrayHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Linq\MergeNullValueHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\MemberSerialization.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\MetadataPropertyHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\MissingMemberHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\NullValueHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\ObjectCreationHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\PreserveReferencesHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\ReferenceLoopHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Required.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\SerializationBinder.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\CamelCaseNamingStrategy.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\DiagnosticsTraceWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ErrorContext.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ExpressionValueProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\IAttributeProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\IContractResolver.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\IReferenceResolver.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ITraceWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\IValueProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonArrayContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonContainerContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonLinqContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonObjectContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonProperty.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonStringContract.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\MemoryTraceWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\NamingStrategy.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ObjectConstructor.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ReflectionAttributeProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\TraceJsonReader.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Serialization\TraceJsonWriter.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\StringEscapeHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\TraceLevel.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\TypeNameHandling.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\AotHelper.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\Base64Encoder.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\CollectionWrapper.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ConvertUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DateTimeParser.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DateTimeUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DynamicProxy.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\DynamicUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\EnumUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\EnumValue.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ExpressionReflectionDelegateFactory.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\FSharpUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ImmutableCollectionsUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\JsonTokenUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\MathUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\MethodCall.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\PropertyNameTable.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ReflectionObject.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\StringBuffer.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\StringReference.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\StringUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\TypeExtensions.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\Utilities\ValidationUtils.cs" />
+    <Compile Include="Dependencies\Newtonsoft.Json\WriteState.cs" />
+    <Compile Include="Dependencies\ShellLink\Const\KNOWNFOLDERID.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\CommonNetworkRelativeLinkFlags.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\CSIDL.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\DriveType.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\FileAttributesFlags.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\FillAttributes.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\FontFamily.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\FontPitch.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\HotKeyFlags.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\LinkFlags.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\LinkInfoFlags.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\NetworkProviderType.cs" />
+    <Compile Include="Dependencies\ShellLink\Flags\ShowCommand.cs" />
+    <Compile Include="Dependencies\ShellLink\Internal\Win32.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Flags\PropertyType.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\SerializedPropertyStore.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\IntegerName.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\SerializedPropertyStorage.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\SerializedPropertyValue.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\StringName.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\Structure.cs" />
+    <Compile Include="Dependencies\ShellLink\PropertyStore\Structures\TypedPropertyValue.cs" />
+    <Compile Include="Dependencies\ShellLink\Shortcut.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\CommonNetworkRelativeLink.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ConsoleDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ConsoleFEDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\CplLinkTargetIDList.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\DarwinDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\EnvironmentVariableDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ExtraData.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ExtraDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\IconEnvironmentDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\IDList.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ItemID.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\KnownFolderDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\LinkInfo.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\LinkTargetIDList.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\PropertyStoreDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ShellLinkHeader.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\ShimDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\SpecialFolderDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\StringData.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\Structure.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\TerminalBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\TrackerDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\VistaAndAboveIDListDataBlock.cs" />
+    <Compile Include="Dependencies\ShellLink\Structures\VolumeID.cs" />
+    <Compile Include="HML Library\HAPI.cs" />
+    <Compile Include="HML Library\HConsole.cs" />
+    <Compile Include="HML Library\HLib.cs" />
+    <Compile Include="HML Library\HUtils.cs" />
+    <Compile Include="HML Library\HNotify.cs" />
+    <Compile Include="HML Library\SyncedPages\MenuPage.cs" />
+    <Compile Include="HML Library\Mod.cs" />
+    <Compile Include="HML Library\SyncedPages\ModManagerPage.cs" />
+    <Compile Include="HML Library\ModManagers\BaseModHandler.cs" />
+    <Compile Include="HML Library\ModManagers\FolderModHandler.cs" />
+    <Compile Include="HML Library\ModManagers\ModManager.cs" />
+    <Compile Include="HML Library\ModManagers\ZipModHandler.cs" />
+    <Compile Include="HML Library\TooltipHandler.cs" />
+    <Compile Include="HML Library\UnityMainThreadDispatcher.cs" />
+    <Compile Include="HLoader.cs" />
+    <Compile Include="LauncherConfiguration.cs" />
+    <Compile Include="Entrypoint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HML Library\HCertHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\0Harmony.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\SharpZipLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dependencies\IniFileParser\Model\IniData.cs.rej" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\System.ValueTuple.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\Mono.Cecil.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\RTCP.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\RTCPNetImprovements.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\HCompiler\Microsoft.CodeAnalysis.CSharp.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Microsoft.CodeAnalysis.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Mono.Posix.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Mono.Security.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\RoslynCSharp.Compiler.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\RoslynCSharp.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.AppContext.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Collections.Concurrent.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Collections.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Collections.Immutable.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.ComponentModel.Composition.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Configuration.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Console.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Core.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Diagnostics.Debug.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Diagnostics.FileVersionInfo.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Diagnostics.StackTrace.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Diagnostics.Tools.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Globalization.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.IO.Compression.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.IO.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.IO.FileSystem.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.IO.FileSystem.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Linq.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Linq.Expressions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Numerics.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Reflection.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Reflection.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Reflection.Metadata.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Reflection.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Resources.ResourceManager.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Runtime.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Runtime.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Runtime.InteropServices.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Runtime.Numerics.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Runtime.Serialization.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Security.Cryptography.Algorithms.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Security.Cryptography.Encoding.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Security.Cryptography.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Security.Cryptography.X509Certificates.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Security.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.ServiceModel.Internals.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Text.Encoding.CodePages.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Text.Encoding.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Text.Encoding.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Threading.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Threading.Tasks.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Threading.Tasks.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Threading.Tasks.Parallel.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Threading.Thread.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.ValueTuple.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.Linq.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.ReaderWriter.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.XDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.XmlDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.XPath.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\System.Xml.XPath.XDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Trivial.CodeSecurity.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Trivial.Mono.Cecil.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Trivial.Mono.Cecil.Mdb.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Trivial.Mono.Cecil.Pdb.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Dependencies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\references\Raft\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\references\Raft\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HCompiler.Mono">
+      <HintPath>Dependencies\HCompiler.Mono.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <HintPath>Dependencies\SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Trivial.Mono.Cecil, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\HCompiler\Trivial.Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\references\Mono\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\references\Mono\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\references\Mono\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\HCompiler.Mono.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)"=="RAFT" (
+ COPY "$(TargetPath)" "$(SolutionDir)../build/scripts/raft/AssemblyLoader.dll"
+ if EXIST "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft" (
+  MKDIR "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft" &gt; NUL 2&gt;&amp;1
+  COPY "$(TargetPath)" "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft\AssemblyLoader.dll"
+ )
+)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

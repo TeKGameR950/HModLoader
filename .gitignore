@@ -1,0 +1,15 @@
+*.suo
+*.bin
+*.pdb
+*.cache
+*.lock
+*.ide
+*.vsidx
+*.vs
+*.projitems
+app.config
+*deps.json
+launchSettings.json
+project-colors.json
+build/!.gitkeep
+obj/

@@ -1,0 +1,11 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)' == 'SOTF'">
+    <DefineConstants>GAME_SOTF,RUNTIME_IL2CPP</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RAFT'">
+    <DefineConstants>GAME_RAFT,RUNTIME_MONO</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'GREENHELL'">
+    <DefineConstants>GAME_GREENHELL,RUNTIME_MONO</DefineConstants>
+  </PropertyGroup>
+</Project>

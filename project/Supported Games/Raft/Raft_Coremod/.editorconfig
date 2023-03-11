@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# CS4014: Dans la mesure où cet appel n'est pas attendu, l'exécution de la méthode actuelle continue avant la fin de l'appel
+dotnet_diagnostic.CS4014.severity = none
+
+# CS1998: Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone
+dotnet_diagnostic.CS1998.severity = none

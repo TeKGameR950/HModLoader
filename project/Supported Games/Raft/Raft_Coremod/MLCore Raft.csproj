@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <GenerateTargetFrameworkMonikerAttribute>false</GenerateTargetFrameworkMonikerAttribute>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ExcludePackageFilesFromOutput>true</ExcludePackageFilesFromOutput>
+    <OutputPath>build\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ProjectGuid>{A338EB23-4227-47B0-B29F-C45A7A7DAE26}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>HMLCore_Raft</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RAFT|x86'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientPlugins\ClientPlugin.cs" />
+    <Compile Include="CustomLoadingScreen.cs" />
+    <Compile Include="DefaultConsoleCommands.cs" />
+    <Compile Include="MasterAPI.cs" />
+    <Compile Include="MenuPages\CreditsPage.cs" />
+    <Compile Include="MenuPages\SettingsPage.cs" />
+    <Compile Include="MenuPages\ServersPage.cs" />
+    <Compile Include="MenuPages\HomePage.cs" />
+    <Compile Include="NetworkModManager.cs" />
+    <Compile Include="ClientPlugins\ClientPluginManager.cs" />
+    <Compile Include="RTCPClient\RNetwork\RNetworkImprovements.cs" />
+    <Compile Include="RTCPClient\RTCP.cs" />
+    <Compile Include="RTCPClient\RTCPHarmonyPatches.cs" />
+    <Compile Include="Utils\CustomTMProInputField.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="RAPI\InternalItemAPI.cs" />
+    <Compile Include="RAPI\HarmonyPatches.cs" />
+    <Compile Include="RAPI\ModEvents.cs" />
+    <Compile Include="RawSharp.cs" />
+    <Compile Include="RChat.cs" />
+    <Compile Include="RML_Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAPI\RAPI.cs" />
+    <Compile Include="RConsole.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Ack.cs" />
+    <Compile Include="ExternalPackages\SocketIO\AuthenticationBase.cs" />
+    <Compile Include="ExternalPackages\SocketIO\AuthenticationChallenge.cs" />
+    <Compile Include="ExternalPackages\SocketIO\AuthenticationResponse.cs" />
+    <Compile Include="ExternalPackages\SocketIO\AuthenticationSchemes.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ByteOrder.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Chunk.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ChunkedRequestStream.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ChunkStream.cs" />
+    <Compile Include="ExternalPackages\SocketIO\CloseEventArgs.cs" />
+    <Compile Include="ExternalPackages\SocketIO\CloseStatusCode.cs" />
+    <Compile Include="ExternalPackages\SocketIO\CompressionMethod.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Cookie.cs" />
+    <Compile Include="ExternalPackages\SocketIO\CookieCollection.cs" />
+    <Compile Include="ExternalPackages\SocketIO\CookieException.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Decoder.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Encoder.cs" />
+    <Compile Include="ExternalPackages\SocketIO\EndPointListener.cs" />
+    <Compile Include="ExternalPackages\SocketIO\EndPointManager.cs" />
+    <Compile Include="ExternalPackages\SocketIO\EnginePacketType.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ErrorEventArgs.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Ext.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Fin.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HandshakeBase.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HandshakeRequest.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HandshakeResponse.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpBasicIdentity.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpConnection.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpDigestIdentity.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpHeaderInfo.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpHeaderType.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListener.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerContext.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerException.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerPrefixCollection.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerRequest.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerResponse.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpListenerWebSocketContext.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpStatusCode.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpStreamAsyncResult.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpUtility.cs" />
+    <Compile Include="ExternalPackages\SocketIO\HttpVersion.cs" />
+    <Compile Include="ExternalPackages\SocketIO\InputChunkState.cs" />
+    <Compile Include="ExternalPackages\SocketIO\InputState.cs" />
+    <Compile Include="ExternalPackages\SocketIO\JSONObject.cs" />
+    <Compile Include="ExternalPackages\SocketIO\JSONTemplates.cs" />
+    <Compile Include="ExternalPackages\SocketIO\LineState.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ListenerAsyncResult.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ListenerPrefix.cs" />
+    <Compile Include="ExternalPackages\SocketIO\LogData.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Logger.cs" />
+    <Compile Include="ExternalPackages\SocketIO\LogLevel.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Mask.cs" />
+    <Compile Include="ExternalPackages\SocketIO\MessageEventArgs.cs" />
+    <Compile Include="ExternalPackages\SocketIO\NetworkCredential.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Opcode.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Packet.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Parser.cs" />
+    <Compile Include="ExternalPackages\SocketIO\PayloadData.cs" />
+    <Compile Include="ExternalPackages\SocketIO\QueryStringCollection.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ReadBufferState.cs" />
+    <Compile Include="ExternalPackages\SocketIO\RequestStream.cs" />
+    <Compile Include="ExternalPackages\SocketIO\ResponseStream.cs" />
+    <Compile Include="ExternalPackages\SocketIO\Rsv.cs" />
+    <Compile Include="ExternalPackages\SocketIO\SocketIOComponent.cs" />
+    <Compile Include="ExternalPackages\SocketIO\SocketIOEvent.cs" />
+    <Compile Include="ExternalPackages\SocketIO\SocketIOException.cs" />
+    <Compile Include="ExternalPackages\SocketIO\SocketPacketType.cs" />
+    <Compile Include="ExternalPackages\SocketIO\SslStream.cs" />
+    <Compile Include="ExternalPackages\SocketIO\TcpListenerWebSocketContext.cs" />
+    <Compile Include="ExternalPackages\SocketIO\VectorTemplates.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebHeaderCollection.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocket.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocketContext.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocketException.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocketFrame.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocketState.cs" />
+    <Compile Include="ExternalPackages\SocketIO\WebSocketStream.cs" />
+    <Compile Include="RSocket.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\AssemblyLoader\Dependencies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Raft\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Raft\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HCompiler.Mono">
+      <HintPath>..\..\AssemblyLoader\Dependencies\HCompiler.Mono.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RTCP, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AssemblyLoader\Dependencies\RTCP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RTCPNetImprovements, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AssemblyLoader\Dependencies\RTCPNetImprovements.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <HintPath>..\..\AssemblyLoader\Dependencies\SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Raft\Sirenix.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Raft\Sirenix.Serialization.Config.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\references\Mono\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AssemblyLoader\AssemblyLoader.csproj">
+      <Project>{83b26fba-f4d0-4eac-afb8-6b5c51df3cd1}</Project>
+      <Name>AssemblyLoader</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)"=="RAFT" (
+ COPY "$(TargetPath)" "$(SolutionDir)../build/scripts/raft/HMLCore_Raft.dll"
+ if EXIST "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft" (
+  MKDIR "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft" &gt; NUL 2&gt;&amp;1
+  COPY "$(TargetPath)" "C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\raft\HMLCore_Raft.dll"
+ )
+)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="../../DefineConstants.props" />
+    <PropertyGroup>
+        <Description>BepInEx Core library</Description>
+        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <Configurations>SOTF</Configurations>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GenerateTargetFrameworkMonikerAttribute>false</GenerateTargetFrameworkMonikerAttribute>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <ExcludePackageFilesFromOutput>true</ExcludePackageFilesFromOutput>
+    </PropertyGroup>
+
+    <PropertyGroup>
+  <LangVersion>10.0</LangVersion>
+  <FileVersion>6.0.0.0</FileVersion>
+  <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  <OutputPath>build\</OutputPath>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+</PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='SOTF|netstandard2.0|AnyCPU'">
+      <DebugType>portable</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+        <PackageReference Include="HarmonyX" Version="2.10.1" />
+        <PackageReference Include="SemanticVersioning" Version="2.0.2" />
+        <PackageReference Include="MonoMod.Utils" Version="22.5.1.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Contract\IPlugin.cs" />
+    </ItemGroup>
+
+    <Target Name="DeleteSys" AfterTargets="Build">
+        <ItemGroup>
+            <FilesToDelete Include="$(OutputPath)System.*.dll" />
+            <FilesToDelete Include="$(OutputPath)*.deps.json" />
+        </ItemGroup>
+        <Delete Files="@(FilesToDelete)" />
+    </Target>
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="if &quot;$(ConfigurationName)&quot;==&quot;SOTF&quot; (&#xD;&#xA; COPY &quot;$(TargetPath)&quot; &quot;$(SolutionDir)../build/scripts/sotf/core/BepInEx.Core.dll&quot;&#xD;&#xA; if EXIST &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf&quot; (&#xD;&#xA;  MKDIR /I &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf\core\&quot; &gt; NUL 2&gt;&amp;1&#xD;&#xA;  COPY &quot;$(TargetPath)&quot; &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf\core\BepInEx.Core.dll&quot;&#xD;&#xA; )&#xD;&#xA;)" />
+    </Target>
+</Project>

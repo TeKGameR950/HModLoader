@@ -1,0 +1,264 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="../DefineConstants.props" />
+	<PropertyGroup>
+		<GenerateTargetFrameworkMonikerAttribute>false</GenerateTargetFrameworkMonikerAttribute>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<ExcludePackageFilesFromOutput>true</ExcludePackageFilesFromOutput>
+	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>HMLCore</AssemblyName>
+    <Description>HLoader Core</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>HML</RootNamespace>
+	<OutputPath>build\</OutputPath>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <IsPublishable>False</IsPublishable>
+    <PackageOutputPath>$(OutputPath) </PackageOutputPath>
+    <Configurations>SOTF</Configurations>
+  </PropertyGroup>
+	<Target Name="DeleteSys" AfterTargets="Build">
+		<ItemGroup>
+			<FilesToDelete Include="$(OutputPath)System.*.dll" />
+			<FilesToDelete Include="$(OutputPath)*.deps.json" />
+		</ItemGroup>
+		<Delete Files="@(FilesToDelete)" />
+	</Target>
+  <ItemGroup>
+    <None Remove="Dependencies\HCompiler\Core\Microsoft.CodeAnalysis.CSharp.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Microsoft.CodeAnalysis.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Mono.Posix.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Mono.Security.dll" />
+    <None Remove="Dependencies\HCompiler\Core\RoslynCSharp.Compiler.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.AppContext.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Collections.Concurrent.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Collections.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Collections.Immutable.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.ComponentModel.Composition.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Configuration.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Console.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Core.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Diagnostics.Debug.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Diagnostics.FileVersionInfo.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Diagnostics.StackTrace.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Diagnostics.Tools.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Globalization.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.IO.Compression.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.IO.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.IO.FileSystem.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.IO.FileSystem.Primitives.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Linq.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Linq.Expressions.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Numerics.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Reflection.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Reflection.Extensions.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Reflection.Metadata.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Reflection.Primitives.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Resources.ResourceManager.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Runtime.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Runtime.Extensions.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Runtime.InteropServices.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Runtime.Numerics.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Runtime.Serialization.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Security.Cryptography.Algorithms.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Security.Cryptography.Encoding.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Security.Cryptography.Primitives.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Security.Cryptography.X509Certificates.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Security.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.ServiceModel.Internals.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Text.Encoding.CodePages.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Text.Encoding.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Text.Encoding.Extensions.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Threading.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Threading.Tasks.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Threading.Tasks.Extensions.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Threading.Tasks.Parallel.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Threading.Thread.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.ValueTuple.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.Linq.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.ReaderWriter.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.XDocument.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.XmlDocument.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.XPath.dll" />
+    <None Remove="Dependencies\HCompiler\Core\System.Xml.XPath.XDocument.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Trivial.CodeSecurity - Original.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Trivial.CodeSecurity.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.Mdb.dll" />
+    <None Remove="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.Pdb.dll" />
+    <None Remove="Dependencies\HCompiler\HCompiler.IL2CPP.dll" />
+    <None Remove="Dependencies\HCompiler\SharpZipLib.dll" />
+    <None Remove="Dependencies\Mono.Cecil.dll" />
+    <None Remove="Dependencies\RTCP.dll" />
+    <None Remove="Dependencies\RTCPNetImprovements.dll" />
+    <None Remove="Dependencies\SharpZipLib.dll" />
+    <None Remove="Dependencies\System.ValueTuple.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Microsoft.CodeAnalysis.CSharp.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Microsoft.CodeAnalysis.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Mono.Posix.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Mono.Security.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\RoslynCSharp.Compiler.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.AppContext.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Collections.Concurrent.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Collections.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Collections.Immutable.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.ComponentModel.Composition.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Configuration.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Console.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Core.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Diagnostics.Debug.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Diagnostics.FileVersionInfo.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Diagnostics.StackTrace.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Diagnostics.Tools.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Globalization.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.IO.Compression.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.IO.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.IO.FileSystem.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.IO.FileSystem.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Linq.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Linq.Expressions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Numerics.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Reflection.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Reflection.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Reflection.Metadata.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Reflection.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Resources.ResourceManager.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Runtime.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Runtime.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Runtime.InteropServices.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Runtime.Numerics.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Runtime.Serialization.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Security.Cryptography.Algorithms.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Security.Cryptography.Encoding.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Security.Cryptography.Primitives.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Security.Cryptography.X509Certificates.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Security.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.ServiceModel.Internals.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Text.Encoding.CodePages.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Text.Encoding.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Text.Encoding.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Threading.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Threading.Tasks.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Threading.Tasks.Extensions.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Threading.Tasks.Parallel.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Threading.Thread.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.ValueTuple.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.Linq.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.ReaderWriter.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.XDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.XmlDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.XPath.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\System.Xml.XPath.XDocument.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Trivial.CodeSecurity - Original.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Trivial.CodeSecurity.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.Mdb.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\Core\Trivial.Mono.Cecil.Pdb.dll" />
+    <EmbeddedResource Include="Dependencies\HCompiler\HCompiler.IL2CPP.dll" />
+    <EmbeddedResource Include="Dependencies\SharpZipLib.dll" />
+    <EmbeddedResource Include="Dependencies\System.ValueTuple.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="HCompiler - IL2CPP">
+      <HintPath>Dependencies\HCompiler\HCompiler.IL2CPP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2Cppmscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>..\..\references\IL2CPP\BepInEx\Il2CppSystem.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\references\IL2CPP\BepInEx\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(ConfigurationName)&quot;==&quot;SOTF&quot; (&#xD;&#xA; COPY &quot;$(TargetPath)&quot; &quot;$(SolutionDir)../build/scripts/sotf/HMLCore.dll&quot;&#xD;&#xA; if EXIST &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf&quot; (&#xD;&#xA;  MKDIR &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf\plugins&quot; &gt; NUL 2&gt;&amp;1&#xD;&#xA;  COPY &quot;$(TargetPath)&quot; &quot;C:\Users\TeKGameR\AppData\Roaming\HModLoader\data\games\sotf\plugins\HMLCore.dll&quot;&#xD;&#xA; )&#xD;&#xA;)" />
+  </Target>
+</Project>
